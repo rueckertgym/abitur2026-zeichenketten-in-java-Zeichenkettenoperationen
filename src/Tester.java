@@ -73,7 +73,10 @@ public class Tester {
      */
     public String zeichenketteUmkehren() {
         String umgedrehtes ="";
-        //dein Quellcode hier
+        for (int i = eingabe.length()-1; i>=0;,i++){
+            umgedrehtes = eingabe;
+            System.out.println(eingabe);
+        }
         return  umgedrehtes;
     }
 

@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class Zeichenkettenoperationen {
-    private Scanner scanner;
-    private Tester test;
 
     public static void main(String[] args) {
         new Zeichenkettenoperationen();
@@ -11,8 +9,8 @@ public class Zeichenkettenoperationen {
     }
 
     public Zeichenkettenoperationen() {
-        test = new Tester();
-        scanner = new Scanner(System.in);
+        Tester test = new Tester();
+        Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("== HAUPTMENÜ ==");
             System.out.println("[1] Zeichenkette umdrehen");
@@ -23,16 +21,16 @@ public class Zeichenkettenoperationen {
             if (option == 1) {
                 System.out.println("Gib die Zeichenkette an, die umgekehrt werden soll:");
                 String zeichenkette = scanner.nextLine();
-                this.test.setEingabe(zeichenkette);
-                this.test.zeichenketteUmkehren();
+                test.setEingabe(zeichenkette);
+                test.zeichenketteUmkehren();
 
             } else if (option == 2) {
                 // this.sendMessage();
                 System.out.println("Gib die Zeichenkette für den Palindromtest an:");
                 String zeichenkette = scanner.nextLine();
-                this.test.setEingabe(zeichenkette);
-                this.test.palindromTest();
-                System.out.println("Ist dein Wort ein Palindrom? Die Antwort lautet: "+this.test.isIstPalindrom());
+                test.setEingabe(zeichenkette);
+                test.palindromTest();
+                System.out.println("Ist dein Wort ein Palindrom? Die Antwort lautet: "+ test.isIstPalindrom());
                 }
             else if (option == 0) {
                 break;
