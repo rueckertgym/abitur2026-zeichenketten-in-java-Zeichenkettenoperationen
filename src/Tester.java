@@ -72,9 +72,13 @@ public class Tester {
      * @return umgedrehtes : String
      */
     public String zeichenketteUmkehren() {
-        String umgedrehtes ="";
-        //dein Quellcode hier
-        return  umgedrehtes;
+
+        for(int i=eingabe.length()-1; i>=0; i--){
+            ausgabe = ausgabe+eingabe.charAt(i);
+
+        }
+        System.out.println(ausgabe);
+        return  ausgabe;
     }
 
     /**
@@ -83,6 +87,13 @@ public class Tester {
      * @return istPalindrom : boolean
      */
     public boolean isIstPalindrom() {
+    zeichenketteUmkehren();
+        if (eingabe==ausgabe){
+        istPalindrom=true;
+    }
+    else {
+        istPalindrom=false;
+    }
         return istPalindrom;
     }
 }
