@@ -88,7 +88,7 @@ public class Tester {
      */
     public boolean isIstPalindrom() {
         ausgabe="";
-    zeichenketteUmkehren();
+        this.zeichenketteUmkehren();
         if (eingabe.equals(ausgabe)){
         istPalindrom=true;
     }
